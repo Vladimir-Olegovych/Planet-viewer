@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Planet Viewer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="menu">Menu</string>
+    <string name="mars_photos">Mars Photos</string>
+    <string name="mars_description">Mars is the fourth planet and the furthest terrestrial planet from the Sun.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="menu_mars">Mars</string>
+    <string name="date_hint">2015-06-03</string>
+    <string name="search">Search</string>
+
+    <string name="rover">rover:</string>
+    <string name="camera">camera:</string>
+    <string name="earth_date">earth_date:</string>
+    <string name="rover_status">rover_status:</string>
+    <string name="launch_landing">launch_landing:</string>
+</resources>

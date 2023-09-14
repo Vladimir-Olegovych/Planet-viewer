@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mars_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/corner_radius_card_4">
+
+    <TextView
+        android:id="@+id/textView_Name_0"
+        style="@style/TextView_Name"
+        android:text="@string/mars_photos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView_Mars"
+        style="@style/ImageView_Size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/mars" />
+
+    <TextView
+        android:id="@+id/textView_Description_0"
+        style="@style/TextView_Description"
+        android:text="@string/mars_description"
+        app:layout_constraintEnd_toStartOf="@+id/imageView_Mars"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_Name_0" />
+</androidx.constraintlayout.widget.ConstraintLayout>
