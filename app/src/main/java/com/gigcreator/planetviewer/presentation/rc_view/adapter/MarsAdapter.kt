@@ -7,7 +7,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.gigcreator.planetviewer.R
-import com.gigcreator.planetviewer.domain.models.Photo
+import com.gigcreator.domain.models.Photo
 import com.gigcreator.planetviewer.presentation.fragment.MarsFragment
 import com.gigcreator.planetviewer.presentation.rc_view.holder.MarsHolder
 

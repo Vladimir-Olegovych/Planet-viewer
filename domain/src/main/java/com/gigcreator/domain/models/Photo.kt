@@ -1,4 +1,4 @@
-package com.gigcreator.planetviewer.domain.models
+package com.gigcreator.domain.models
 
 import com.fasterxml.jackson.annotation.JsonProperty
 

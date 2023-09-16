@@ -2,9 +2,8 @@ package com.gigcreator.planetviewer.presentation.viewmodels
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.gigcreator.planetviewer.domain.constants.Constants
-import com.gigcreator.planetviewer.domain.models.Mars
-import com.gigcreator.planetviewer.domain.repository.MarsApiRepository
+import com.gigcreator.domain.repository.MarsApiRepository
+import com.gigcreator.domain.models.Mars
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
@@ -16,10 +15,14 @@ class MarsViewModel(private var date: String = "2015-06-03", private val reposit
 
     fun getMars(callback: (Mars) -> Unit){
         viewModelScope.launch(Dispatchers.IO){
-            val number = repository.getMars(date ,Constants.API_KEY)
+            val number = repository.getMars(date , API_KEY)
             launch(Dispatchers.Main){
                 callback(number)
             }
         }
+    }
+
+    companion object {
+        const val API_KEY = "34gPXnRKqjsrvjUvJcZ4l1hIFz8aqELSzj5gj6tH"
     }
 }

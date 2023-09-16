@@ -1,6 +1,6 @@
-package com.gigcreator.planetviewer.domain.repository
+package com.gigcreator.domain.repository
 
-import com.gigcreator.planetviewer.domain.models.Mars
+import com.gigcreator.domain.models.Mars
 import retrofit2.Retrofit
 import retrofit2.converter.jackson.JacksonConverterFactory
 import retrofit2.http.GET

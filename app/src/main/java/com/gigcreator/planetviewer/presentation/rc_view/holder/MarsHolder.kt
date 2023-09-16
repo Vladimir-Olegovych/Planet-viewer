@@ -5,7 +5,7 @@ import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.gigcreator.planetviewer.databinding.MarsCardBinding
-import com.gigcreator.planetviewer.domain.models.Photo
+import com.gigcreator.domain.models.Photo
 
 
 class MarsHolder(private val context: Context, item: View): RecyclerView.ViewHolder(item){
