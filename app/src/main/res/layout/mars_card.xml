@@ -26,100 +26,111 @@
 
     </androidx.cardview.widget.CardView>
 
-    <TextView
-        android:id="@+id/textView_for_rover"
-        style="@style/Card_TextViewFor"
-        android:text="@string/rover"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView_rover" />
-
-    <TextView
-        android:id="@+id/textView_for_camera"
-        style="@style/Card_TextViewFor"
-        android:layout_marginStart="16dp"
-        android:text="@string/camera"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView_camera" />
-
-    <TextView
-        android:id="@+id/textView_for_earth_date"
-        style="@style/Card_TextViewFor"
-        android:layout_marginStart="16dp"
-        android:text="@string/earth_date"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView_earth_date" />
-
-    <TextView
-        android:id="@+id/textView_for_launch_landing"
-        style="@style/Card_TextViewFor"
-        android:layout_marginStart="16dp"
-        android:text="@string/launch_landing"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView_launch_landing" />
-
-    <TextView
-        android:id="@+id/textView_for_status"
-        style="@style/Card_TextViewFor"
-        android:layout_marginStart="16dp"
-        android:text="@string/rover_status"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView_rover_status" />
-
-    <TextView
-        android:id="@+id/textView_rover"
-        style="@style/Card_TextViewFor"
-        android:layout_width="0dp"
-        android:layout_marginStart="150dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView_CardView" />
-
-    <TextView
-        android:id="@+id/textView_camera"
-        style="@style/Card_TextViewFor"
-        android:layout_width="0dp"
-        android:layout_marginStart="150dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_rover" />
-
-    <TextView
-        android:id="@+id/textView_earth_date"
-        style="@style/Card_TextViewFor"
-        android:layout_width="0dp"
-        android:layout_marginStart="150dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_camera" />
-
-    <TextView
-        android:id="@+id/textView_launch_landing"
-        style="@style/Card_TextViewFor"
-        android:layout_width="0dp"
-        android:layout_marginStart="150dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_earth_date" />
-
-    <TextView
-        android:id="@+id/textView_rover_status"
-        style="@style/Card_TextViewFor"
-        android:layout_width="0dp"
-        android:layout_marginStart="150dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        style="@style/Card_Menu"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_launch_landing" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView_CardView">
+
+        <TextView
+            android:id="@+id/textView_for_rover"
+            style="@style/Card_TextViewFor"
+            android:text="@string/rover"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView_rover" />
+
+        <TextView
+            android:id="@+id/textView_for_camera"
+            style="@style/Card_TextViewFor"
+            android:layout_marginStart="16dp"
+            android:text="@string/camera"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView_camera" />
+
+        <TextView
+            android:id="@+id/textView_for_earth_date"
+            style="@style/Card_TextViewFor"
+            android:layout_marginStart="16dp"
+            android:text="@string/earth_date"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView_earth_date" />
+
+        <TextView
+            android:id="@+id/textView_for_launch_landing"
+            style="@style/Card_TextViewFor"
+            android:layout_marginStart="16dp"
+            android:text="@string/launch_landing"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView_launch_landing" />
+
+        <TextView
+            android:id="@+id/textView_for_status"
+            style="@style/Card_TextViewFor"
+            android:layout_marginStart="16dp"
+            android:text="@string/rover_status"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView_rover_status" />
+
+        <TextView
+            android:id="@+id/textView_rover"
+            style="@style/Card_TextViewFor"
+            android:layout_width="0dp"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView_camera"
+            style="@style/Card_TextViewFor"
+            android:layout_width="0dp"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_rover" />
+
+        <TextView
+            android:id="@+id/textView_earth_date"
+            style="@style/Card_TextViewFor"
+            android:layout_width="0dp"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_camera" />
+
+        <TextView
+            android:id="@+id/textView_launch_landing"
+            style="@style/Card_TextViewFor"
+            android:layout_width="0dp"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_earth_date" />
+
+        <TextView
+            android:id="@+id/textView_rover_status"
+            style="@style/Card_TextViewFor"
+            android:layout_width="0dp"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_launch_landing" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

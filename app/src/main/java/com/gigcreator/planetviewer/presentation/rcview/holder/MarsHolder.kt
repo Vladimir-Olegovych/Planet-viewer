@@ -1,4 +1,4 @@
-package com.gigcreator.planetviewer.presentation.rc_view.holder
+package com.gigcreator.planetviewer.presentation.rcview.holder
 
 import android.content.Context
 import android.view.View

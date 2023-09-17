@@ -84,4 +84,14 @@
         <item name="android:textSize">16sp</item>
         <item name="android:layout_marginStart">16dp</item>
     </style>
+
+    <style name="Card_Menu">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="android:background">@drawable/corner_radius_menu_item_4</item>
+    </style>
 </resources>

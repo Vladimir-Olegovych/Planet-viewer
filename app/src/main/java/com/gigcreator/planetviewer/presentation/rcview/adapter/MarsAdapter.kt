@@ -1,4 +1,4 @@
-package com.gigcreator.planetviewer.presentation.rc_view.adapter
+package com.gigcreator.planetviewer.presentation.rcview.adapter
 
 import android.content.Context
 import android.content.Intent
@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.gigcreator.planetviewer.R
 import com.gigcreator.domain.models.Photo
 import com.gigcreator.planetviewer.presentation.fragment.MarsFragment
-import com.gigcreator.planetviewer.presentation.rc_view.holder.MarsHolder
+import com.gigcreator.planetviewer.presentation.rcview.holder.MarsHolder
 
 
 class MarsAdapter(private val context: Context, private val fragment: MarsFragment): RecyclerView.Adapter<MarsHolder>() {

@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.gigcreator.planetviewer.databinding.FragmentMarsBinding
 import com.gigcreator.planetviewer.presentation.functions.toast
 import com.gigcreator.planetviewer.presentation.viewmodels.MarsViewModel
-import com.gigcreator.planetviewer.presentation.rc_view.adapter.MarsAdapter
+import com.gigcreator.planetviewer.presentation.rcview.adapter.MarsAdapter
 import ru.tinkoff.decoro.MaskImpl
 import ru.tinkoff.decoro.parser.UnderscoreDigitSlotsParser
 import ru.tinkoff.decoro.watchers.MaskFormatWatcher
