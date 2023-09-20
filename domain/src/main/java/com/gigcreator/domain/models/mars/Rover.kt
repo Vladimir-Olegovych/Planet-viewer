@@ -1,4 +1,4 @@
-package com.gigcreator.domain.models
+package com.gigcreator.domain.models.mars
 
 import com.fasterxml.jackson.annotation.JsonProperty
 
