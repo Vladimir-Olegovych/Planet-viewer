@@ -32,6 +32,7 @@
         <item name="android:layout_marginStart">16dp</item>
         <item name="android:layout_marginTop">16dp</item>
         <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_marginBottom">16dp</item>
     </style>
 
     <style name="ImageView_Size">
@@ -93,5 +94,13 @@
         <item name="android:layout_marginEnd">16dp</item>
         <item name="android:layout_marginBottom">16dp</item>
         <item name="android:background">@drawable/corner_radius_menu_item_4</item>
+    </style>
+
+    <style name="TextView_AsteroidInfo">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textColor">@color/gray</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">@font/sf_pro_display_500</item>
     </style>
 </resources>

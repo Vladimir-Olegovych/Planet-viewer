@@ -1,60 +1,73 @@
 package com.gigcreator.planetviewer.presentation.fragment
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
+import androidx.fragment.app.activityViewModels
+import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
+import com.gigcreator.domain.models.asteroid.NearEarthObject
 import com.gigcreator.planetviewer.R
+import com.gigcreator.planetviewer.databinding.FragmentAsteroidBinding
+import com.gigcreator.planetviewer.presentation.viewmodels.AsteroidViewModel
+import com.gigcreator.planetviewer.presentation.viewmodels.DataModel
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [AsteroidFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class AsteroidFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private lateinit var binding: FragmentAsteroidBinding
+    private lateinit var listEarthObjects: List<NearEarthObject>
+
+    private val listData = ArrayList<String>()
+
+    private val marsModel by viewModels<AsteroidViewModel>()
+    private val dataModel: DataModel by activityViewModels()
+
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_asteroid, container, false)
+
+
+        binding = FragmentAsteroidBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment AsteroidFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            AsteroidFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        init()
+
+        binding.listView.setOnItemClickListener { parent, view, position, id ->
+            dataModel.near_earth_objects.value = listEarthObjects[position]
+            dataModel.position.value = position
+            findNavController().navigate(R.id.action_asteroidFragment_to_asteroidInfoFragment)
+        }
+    }
+    private fun init(){
+        val adapter = ArrayAdapter(requireContext(), R.layout.asteroid_card, listData)
+        binding.listView.adapter = adapter
+
+        if(!this::listEarthObjects.isInitialized) {
+            marsModel.getAsteroid { asteroid ->
+                listEarthObjects = asteroid.near_earth_objects
+
+                listEarthObjects.forEach {
+                    listData.add(it.name)
+                    adapter.notifyDataSetChanged()
                 }
             }
+        }else {
+            adapter.clear()
+            listEarthObjects.forEach {
+                listData.add(it.name)
+                adapter.notifyDataSetChanged()
+            }
+        }
     }
 }

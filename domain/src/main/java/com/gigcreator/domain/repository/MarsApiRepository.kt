@@ -1,6 +1,6 @@
 package com.gigcreator.domain.repository
 
-import com.gigcreator.domain.models.Mars
+import com.gigcreator.domain.models.mars.Mars
 import retrofit2.Retrofit
 import retrofit2.converter.jackson.JacksonConverterFactory
 import retrofit2.http.GET

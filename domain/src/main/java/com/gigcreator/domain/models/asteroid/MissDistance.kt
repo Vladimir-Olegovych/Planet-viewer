@@ -1,8 +1,14 @@
 package com.gigcreator.domain.models.asteroid
 
-data class MissDistance(
-    val astronomical: String,
-    val kilometers: String,
-    val lunar: String,
-    val miles: String
-)
+import com.fasterxml.jackson.annotation.JsonProperty
+
+class MissDistance {
+    @JsonProperty("astronomical")
+    val astronomical: String = ""
+    @JsonProperty("kilometers")
+    val kilometers: String = ""
+    @JsonProperty("lunar")
+    val lunar: String = ""
+    @JsonProperty("miles")
+    val miles: String = ""
+}

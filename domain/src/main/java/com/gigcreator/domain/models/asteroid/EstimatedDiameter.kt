@@ -1,8 +1,14 @@
 package com.gigcreator.domain.models.asteroid
 
-data class EstimatedDiameter(
-    val feet: Feet,
-    val kilometers: Kilometers,
-    val meters: Meters,
-    val miles: Miles
-)
+import com.fasterxml.jackson.annotation.JsonProperty
+
+class EstimatedDiameter {
+    @JsonProperty("feet")
+    val feet: Feet = Feet()
+    @JsonProperty("kilometers")
+    val kilometers: Kilometers = Kilometers()
+    @JsonProperty("meters")
+    val meters: Meters = Meters()
+    @JsonProperty("miles")
+    val miles: Miles = Miles()
+}

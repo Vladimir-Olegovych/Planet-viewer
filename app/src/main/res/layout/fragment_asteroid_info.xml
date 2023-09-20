@@ -1,14 +1,213 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.fragment.AsteroidInfoFragment">
+    android:background="@color/background"
+    tools:context=".presentation.fragment.MarsFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/Toolbar">
+        <TextView
+            android:id="@+id/toolbar_title"
+            style="@style/TextView_Heading"/>
+    </androidx.appcompat.widget.Toolbar>
 
-</FrameLayout>
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/absolute_magnitude_h"
+                style="@style/TextView_AsteroidInfo" />
+            <TextView
+                android:id="@+id/close_approach_date"
+                style="@style/TextView_AsteroidInfo" />
+            <TextView
+                android:id="@+id/close_approach_date_full"
+                style="@style/TextView_AsteroidInfo" />
+            <TextView
+                android:id="@+id/epoch_date_close_approach"
+                style="@style/TextView_AsteroidInfo" />
+            <TextView
+                android:id="@+id/astronomical"
+                style="@style/TextView_AsteroidInfo" />
+            <TextView
+                android:id="@+id/kilometers"
+                style="@style/TextView_AsteroidInfo" />
+            <TextView
+                android:id="@+id/lunar"
+                style="@style/TextView_AsteroidInfo" />
+            <TextView
+                android:id="@+id/miles"
+                style="@style/TextView_AsteroidInfo" />
+            <TextView
+                android:id="@+id/orbiting_body"
+                style="@style/TextView_AsteroidInfo" />
+            <TextView
+                android:id="@+id/kilometers_per_hour"
+                android:textColor="@color/blue"
+                style="@style/TextView_AsteroidInfo" />
+            <TextView
+                android:id="@+id/kilometers_per_second"
+                android:textColor="@color/blue"
+                style="@style/TextView_AsteroidInfo" />
+            <TextView
+                android:id="@+id/miles_per_hour"
+                android:textColor="@color/blue"
+                style="@style/TextView_AsteroidInfo" />
+            <TextView
+                android:id="@+id/designation"
+                style="@style/TextView_AsteroidInfo" />
+            <TextView
+                android:id="@+id/estimated_diameter_max"
+                android:textColor="@color/blue"
+                style="@style/TextView_AsteroidInfo" />
+            <TextView
+                android:id="@+id/estimated_diameter_min"
+                android:textColor="@color/blue"
+                style="@style/TextView_AsteroidInfo" />
+            <TextView
+                android:id="@+id/estimated_diameter_max_0"
+                android:textColor="@color/blue"
+                style="@style/TextView_AsteroidInfo" />
+            <TextView
+                android:id="@+id/estimated_diameter_min_0"
+                android:textColor="@color/blue"
+                style="@style/TextView_AsteroidInfo" />
+            <TextView
+                android:id="@+id/estimated_diameter_max_1"
+                android:textColor="@color/blue"
+                style="@style/TextView_AsteroidInfo" />
+            <TextView
+                android:id="@+id/estimated_diameter_min_1"
+                android:textColor="@color/blue"
+                style="@style/TextView_AsteroidInfo" />
+            <TextView
+                android:id="@+id/estimated_diameter_max_2"
+                android:textColor="@color/blue"
+                style="@style/TextView_AsteroidInfo" />
+            <TextView
+                android:id="@+id/estimated_diameter_min_2"
+                android:textColor="@color/blue"
+                style="@style/TextView_AsteroidInfo" />
+            <TextView
+                android:id="@+id/id"
+                style="@style/TextView_AsteroidInfo" />
+            <TextView
+                android:id="@+id/is_potentially_hazardous_asteroid"
+                style="@style/TextView_AsteroidInfo" />
+            <TextView
+                android:id="@+id/is_sentry_object"
+                style="@style/TextView_AsteroidInfo" />
+            <TextView
+                android:id="@+id/self"
+                style="@style/TextView_AsteroidInfo" />
+            <TextView
+                android:id="@+id/name"
+                style="@style/TextView_AsteroidInfo" />
+            <TextView
+                android:id="@+id/name_limited"
+                style="@style/TextView_AsteroidInfo" />
+            <TextView
+                android:id="@+id/nasa_jpl_url"
+                android:textColor="@color/blue"
+                style="@style/TextView_AsteroidInfo" />
+            <TextView
+                android:id="@+id/neo_reference_id"
+                style="@style/TextView_AsteroidInfo" />
+            <TextView
+                android:id="@+id/aphelion_distance"
+                style="@style/TextView_AsteroidInfo" />
+            <TextView
+                android:id="@+id/ascending_node_longitude"
+                style="@style/TextView_AsteroidInfo" />
+            <TextView
+                android:id="@+id/data_arc_in_days"
+                style="@style/TextView_AsteroidInfo" />
+            <TextView
+                android:id="@+id/eccentricity"
+                style="@style/TextView_AsteroidInfo" />
+            <TextView
+                android:id="@+id/epoch_osculation"
+                style="@style/TextView_AsteroidInfo" />
+            <TextView
+                android:id="@+id/equinox"
+                style="@style/TextView_AsteroidInfo" />
+            <TextView
+                android:id="@+id/first_observation_date"
+                style="@style/TextView_AsteroidInfo" />
+            <TextView
+                android:id="@+id/inclination"
+                style="@style/TextView_AsteroidInfo" />
+            <TextView
+                android:id="@+id/jupiter_tisserand_invariant"
+                style="@style/TextView_AsteroidInfo" />
+            <TextView
+                android:id="@+id/last_observation_date"
+                style="@style/TextView_AsteroidInfo" />
+            <TextView
+                android:id="@+id/mean_anomaly"
+                style="@style/TextView_AsteroidInfo" />
+            <TextView
+                android:id="@+id/mean_motion"
+                style="@style/TextView_AsteroidInfo" />
+            <TextView
+                android:id="@+id/minimum_orbit_intersection"
+                style="@style/TextView_AsteroidInfo" />
+            <TextView
+                android:id="@+id/observations_used"
+                style="@style/TextView_AsteroidInfo" />
+            <TextView
+                android:id="@+id/orbit_class_description"
+                style="@style/TextView_AsteroidInfo" />
+            <TextView
+                android:id="@+id/orbit_class_range"
+                style="@style/TextView_AsteroidInfo" />
+            <TextView
+                android:id="@+id/orbit_class_type"
+                style="@style/TextView_AsteroidInfo" />
+            <TextView
+                android:id="@+id/orbit_determination_date"
+                style="@style/TextView_AsteroidInfo" />
+            <TextView
+                android:id="@+id/orbit_id"
+                style="@style/TextView_AsteroidInfo" />
+            <TextView
+                android:id="@+id/orbit_uncertainty"
+                style="@style/TextView_AsteroidInfo" />
+            <TextView
+                android:id="@+id/orbital_period"
+                style="@style/TextView_AsteroidInfo" />
+            <TextView
+                android:id="@+id/perihelion_argument"
+                style="@style/TextView_AsteroidInfo" />
+            <TextView
+                android:id="@+id/perihelion_distance"
+                style="@style/TextView_AsteroidInfo" />
+            <TextView
+                android:id="@+id/perihelion_time"
+                style="@style/TextView_AsteroidInfo" />
+            <TextView
+                android:id="@+id/semi_major_axis"
+                style="@style/TextView_AsteroidInfo" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -21,6 +21,9 @@ class MenuFragment : Fragment() {
         return binding.root
     }
     private fun onClick(){
+        binding.asteroidsItem.asteroidsLayout.setOnClickListener {
+            findNavController().navigate(R.id.action_menuFragment_to_asteroidFragment)
+        }
         binding.marsItem.marsLayout.setOnClickListener {
             findNavController().navigate(R.id.action_menuFragment_to_marsFragment)
         }

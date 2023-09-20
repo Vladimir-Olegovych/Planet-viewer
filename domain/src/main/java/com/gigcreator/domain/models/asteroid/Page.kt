@@ -1,8 +1,14 @@
 package com.gigcreator.domain.models.asteroid
 
-data class Page(
-    val number: Int,
-    val size: Int,
-    val total_elements: Int,
-    val total_pages: Int
-)
+import com.fasterxml.jackson.annotation.JsonProperty
+
+class Page {
+    @JsonProperty("number")
+    val number: Int = 0
+    @JsonProperty("size")
+    val size: Int = 0
+    @JsonProperty("total_elements")
+    val total_elements: Int = 0
+    @JsonProperty("total_pages")
+    val total_pages: Int = 0
+}

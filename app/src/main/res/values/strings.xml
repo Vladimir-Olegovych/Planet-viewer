@@ -1,12 +1,11 @@
 <resources>
     <string name="app_name">Planet Viewer</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="menu">Menu</string>
-    <string name="mars_photos">Mars Photos</string>
-    <string name="mars_description">Mars is the fourth planet and the furthest terrestrial planet from the Sun.</string>
-    <!-- TODO: Remove or change this placeholder text -->
 
-    <string name="menu_mars">Mars</string>
+    <string name="menu">Menu</string>
+    <string name="mars_photos">Mars Rover Photos</string>
+    <string name="mars_description">This API is designed to collect image data gathered by NASA s Curiosity, Opportunity, and Spirit rovers on Mars and make it more easily available to other developers, educators, and citizen scientists. This API is maintained by Chris Cerami.</string>
+    <string name="asteroid_description">NeoWs (Near Earth Object Web Service) is a RESTful web service for near earth Asteroid information. With NeoWs a user can: search for Asteroids based on their closest approach date to Earth, lookup a specific Asteroid with its NASA JPL small body id, as well as browse the overall data-set.</string>
+
     <string name="date_hint">2015-06-03</string>
     <string name="search">Search</string>
 
@@ -15,4 +14,7 @@
     <string name="earth_date">earth_date:</string>
     <string name="rover_status">rover_status:</string>
     <string name="launch_landing">launch_landing:</string>
+    <string name="asteroid">Asteroids - NeoWs</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

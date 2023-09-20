@@ -15,7 +15,7 @@
         style="@style/Toolbar">
         <TextView
             android:id="@+id/toolbar_title"
-            android:text="@string/menu_mars"
+            android:text="@string/mars_photos"
             style="@style/TextView_Heading"/>
     </androidx.appcompat.widget.Toolbar>
 

@@ -1,7 +1,12 @@
 package com.gigcreator.domain.models.asteroid
 
-data class RelativeVelocity(
-    val kilometers_per_hour: String,
-    val kilometers_per_second: String,
-    val miles_per_hour: String
-)
+import com.fasterxml.jackson.annotation.JsonProperty
+
+class RelativeVelocity {
+    @JsonProperty("kilometers_per_hour")
+    val kilometers_per_hour: String = ""
+    @JsonProperty("kilometers_per_second")
+    val kilometers_per_second: String = ""
+    @JsonProperty("miles_per_hour")
+    val miles_per_hour: String = ""
+}

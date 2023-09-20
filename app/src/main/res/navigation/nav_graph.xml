@@ -13,10 +13,26 @@
         <action
             android:id="@+id/action_menuFragment_to_marsFragment"
             app:destination="@id/marsFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_asteroidFragment"
+            app:destination="@id/asteroidFragment" />
     </fragment>
     <fragment
         android:id="@+id/marsFragment"
         android:name="com.gigcreator.planetviewer.presentation.fragment.MarsFragment"
         android:label="fragment_mars"
         tools:layout="@layout/fragment_mars" />
+    <fragment
+        android:id="@+id/asteroidFragment"
+        android:name="com.gigcreator.planetviewer.presentation.fragment.AsteroidFragment"
+        android:label="fragment_asteroid"
+        tools:layout="@layout/fragment_asteroid" >
+        <action
+            android:id="@+id/action_asteroidFragment_to_asteroidInfoFragment"
+            app:destination="@id/asteroidInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/asteroidInfoFragment"
+        android:name="com.gigcreator.planetviewer.presentation.fragment.AsteroidInfoFragment"
+        android:label="AsteroidInfoFragment" />
 </navigation>

@@ -1,6 +1,10 @@
 package com.gigcreator.domain.models.asteroid
 
-data class Kilometers(
-    val estimated_diameter_max: Double,
-    val estimated_diameter_min: Double
-)
+import com.fasterxml.jackson.annotation.JsonProperty
+
+class Kilometers {
+    @JsonProperty("estimated_diameter_max")
+    val estimated_diameter_max: Double = 0.0
+    @JsonProperty("estimated_diameter_min")
+    val estimated_diameter_min: Double = 0.0
+}

@@ -1,6 +1,10 @@
 package com.gigcreator.domain.models.asteroid
 
-data class Links(
-    val next: String,
-    val self: String
-)
+import com.fasterxml.jackson.annotation.JsonProperty
+
+class Links {
+    @JsonProperty("next")
+    val next: String = ""
+    @JsonProperty("self")
+    val self: String = ""
+}

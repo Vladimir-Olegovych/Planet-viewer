@@ -33,6 +33,13 @@
             android:orientation="vertical">
 
             <include
+                android:id="@+id/asteroids_item"
+                layout="@layout/asteroids_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"/>
+
+            <include
                 android:id="@+id/mars_item"
                 layout="@layout/mars_layout"
                 android:layout_width="match_parent"
