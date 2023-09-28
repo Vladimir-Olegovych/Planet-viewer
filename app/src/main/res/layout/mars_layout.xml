@@ -25,6 +25,7 @@
         android:id="@+id/textView_Description_0"
         style="@style/TextView_Description"
         android:text="@string/mars_description"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/imageView_Mars"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_Name_0" />
