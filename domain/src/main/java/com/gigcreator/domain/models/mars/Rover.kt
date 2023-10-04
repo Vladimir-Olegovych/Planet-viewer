@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty
 
 class Rover {
     @JsonProperty("cameras")
-    val cameras: List<CameraX> = listOf()
+    val cameras: List<com.gigcreator.domain.models.mars.CameraX> = listOf()
     @JsonProperty("id")
     val id: Int = 0
     @JsonProperty("landing_date")

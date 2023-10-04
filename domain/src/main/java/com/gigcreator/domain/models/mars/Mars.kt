@@ -4,5 +4,5 @@ import com.fasterxml.jackson.annotation.JsonProperty
 
 class Mars {
     @JsonProperty("photos")
-    val photos: List<Photo> = listOf()
+    val photos: List<com.gigcreator.domain.models.mars.Photo> = listOf()
 }

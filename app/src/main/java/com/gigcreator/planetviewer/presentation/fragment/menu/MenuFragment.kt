@@ -1,4 +1,4 @@
-package com.gigcreator.planetviewer.presentation.fragment
+package com.gigcreator.planetviewer.presentation.fragment.menu
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -22,7 +22,7 @@ class MenuFragment : Fragment() {
     }
     private fun onClick(){
         binding.asteroidsItem.asteroidsLayout.setOnClickListener {
-            findNavController().navigate(R.id.action_menuFragment_to_asteroidFragment)
+            //findNavController().navigate(R.id.action_menuFragment_to_asteroidFragment)
         }
         binding.marsItem.marsLayout.setOnClickListener {
             findNavController().navigate(R.id.action_menuFragment_to_marsFragment)

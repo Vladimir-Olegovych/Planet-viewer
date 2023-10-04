@@ -1,4 +1,4 @@
-package com.gigcreator.planetviewer.presentation.fragment
+package com.gigcreator.planetviewer.presentation.fragment.mars
 
 import android.os.Bundle
 import android.text.TextUtils
@@ -7,22 +7,22 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.gigcreator.planetviewer.databinding.FragmentMarsBinding
 import com.gigcreator.planetviewer.presentation.functions.toast
-import com.gigcreator.planetviewer.presentation.viewmodels.MarsViewModel
-import com.gigcreator.planetviewer.presentation.rcview.adapter.MarsAdapter
+import com.gigcreator.planetviewer.presentation.fragment.mars.rcview.adapter.MarsAdapter
+import dagger.hilt.android.AndroidEntryPoint
 import ru.tinkoff.decoro.MaskImpl
 import ru.tinkoff.decoro.parser.UnderscoreDigitSlotsParser
 import ru.tinkoff.decoro.watchers.MaskFormatWatcher
 
-
+@AndroidEntryPoint
 class MarsFragment : Fragment() {
 
     private lateinit var binding: FragmentMarsBinding
     private lateinit var adapter: MarsAdapter
-    private val marsModel by viewModels<MarsViewModel>()
-
+    private val marsViewModel: MarsViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -46,15 +46,20 @@ class MarsFragment : Fragment() {
         adapter = MarsAdapter(requireContext(), this@MarsFragment)
         binding.rcView.layoutManager = LinearLayoutManager(requireContext())
         binding.rcView.adapter = adapter
+
+        marsViewModel.resultLiveData.observe(this, Observer {
+            it.photos.forEach { photo -> adapter.add(photo) }
+        })
+
     }
 
     private fun onClick(){
         binding.marsSearchItem.ButtonSearch.setOnClickListener {
             adapter.clear()
-            toast("loading...", requireContext())
-            if (!TextUtils.isEmpty(binding.marsSearchItem.EditTextDate.text))
-                marsModel.setDate(binding.marsSearchItem.EditTextDate.text.toString())
-            marsModel.getMars { it.photos.forEach { photo -> adapter.add(photo) } }
+            if (!TextUtils.isEmpty(binding.marsSearchItem.EditTextDate.text)){
+                toast("loading...", requireContext())
+                marsViewModel.getMars(binding.marsSearchItem.EditTextDate.text.toString())
+            }
         }
     }
 }

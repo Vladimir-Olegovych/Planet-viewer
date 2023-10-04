@@ -1,11 +1,11 @@
-package com.gigcreator.planetviewer.presentation.rcview.holder
+package com.gigcreator.planetviewer.presentation.fragment.mars.rcview.holder
 
 import android.content.Context
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.gigcreator.planetviewer.databinding.MarsCardBinding
 import com.gigcreator.domain.models.mars.Photo
+import com.gigcreator.planetviewer.databinding.MarsCardBinding
 
 
 class MarsHolder(private val context: Context, item: View): RecyclerView.ViewHolder(item){

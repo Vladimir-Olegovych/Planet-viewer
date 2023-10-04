@@ -1,4 +1,4 @@
-package com.gigcreator.planetviewer.presentation.app
+package com.gigcreator.planetviewer.presentation
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp
