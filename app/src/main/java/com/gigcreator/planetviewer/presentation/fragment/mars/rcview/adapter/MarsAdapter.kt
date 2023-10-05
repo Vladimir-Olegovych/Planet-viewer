@@ -9,10 +9,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.gigcreator.domain.models.mars.Photo
 import com.gigcreator.planetviewer.R
 import com.gigcreator.planetviewer.presentation.fragment.mars.MarsFragment
+import com.gigcreator.planetviewer.presentation.fragment.asteroid.rcview.holder.AsteroidHolder
 import com.gigcreator.planetviewer.presentation.fragment.mars.rcview.holder.MarsHolder
 
 
-class MarsAdapter(private val context: Context, private val fragment: MarsFragment): RecyclerView.Adapter<MarsHolder>() {
+class MarsAdapter(private val context: Context): RecyclerView.Adapter<MarsHolder>() {
     private val listPhoto = ArrayList<Photo>()
 
     fun add(photo: Photo){

@@ -1,14 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@android:id/text1"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:textAppearance="?android:attr/textAppearanceListItemSmall"
-    android:gravity="center_vertical"
-    android:fontFamily="@font/sf_pro_display_500"
-    android:textColor="@color/gray"
-    android:textSize="16sp"
-    android:paddingStart="?android:attr/listPreferredItemPaddingStart"
-    android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
-    android:minHeight="?android:attr/listPreferredItemHeightSmall" />
+    android:layout_marginTop="5dp"
+    android:background="@drawable/corner_radius_card_4">
+
+    <TextView
+        android:id="@+id/textView_Asteroid_Name"
+        style="TextView_AsteroidInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        style="@style/Card_Menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_Asteroid_Name">
+
+        <TextView
+            android:id="@+id/textView_for_absolute_magnitude"
+            style="@style/Card_TextViewFor"
+            android:text="@string/magnitude"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView_absolute_magnitude" />
+
+        <TextView
+            android:id="@+id/textView_for_diameter"
+            style="@style/Card_TextViewFor"
+            android:layout_marginStart="16dp"
+            android:text="@string/diameter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView_diameter" />
+
+        <TextView
+            android:id="@+id/textView_for_orbital_period"
+            style="@style/Card_TextViewFor"
+            android:layout_marginStart="16dp"
+            android:text="@string/orbital_period"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView_orbital_period" />
+
+        <TextView
+            android:id="@+id/textView_for_is_potentially_hazardous_asteroid"
+            style="@style/Card_TextViewFor"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/hazardous_asteroid"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView_is_potentially_hazardous_asteroid" />
+
+        <TextView
+            android:id="@+id/textView_absolute_magnitude"
+            style="@style/Card_TextViewFor"
+            android:layout_width="0dp"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView_diameter"
+            style="@style/Card_TextViewFor"
+            android:layout_width="0dp"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_absolute_magnitude" />
+
+        <TextView
+            android:id="@+id/textView_orbital_period"
+            style="@style/Card_TextViewFor"
+            android:layout_width="0dp"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_diameter" />
+
+        <TextView
+            android:id="@+id/textView_is_potentially_hazardous_asteroid"
+            style="@style/Card_TextViewFor"
+            android:layout_width="0dp"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_orbital_period"
+            app:layout_constraintVertical_bias="1.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

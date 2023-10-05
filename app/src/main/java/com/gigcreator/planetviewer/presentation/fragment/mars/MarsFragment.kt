@@ -11,6 +11,7 @@ import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.gigcreator.planetviewer.databinding.FragmentMarsBinding
 import com.gigcreator.planetviewer.presentation.functions.toast
+import com.gigcreator.planetviewer.presentation.fragment.asteroid.rcview.adapter.AsteroidAdapter
 import com.gigcreator.planetviewer.presentation.fragment.mars.rcview.adapter.MarsAdapter
 import dagger.hilt.android.AndroidEntryPoint
 import ru.tinkoff.decoro.MaskImpl
@@ -36,24 +37,6 @@ class MarsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         init()
-        onClick()
-    }
-
-    private fun init(){
-        MaskFormatWatcher(MaskImpl.createTerminated(UnderscoreDigitSlotsParser().
-        parseSlots("____-__-__"))).installOn(binding.marsSearchItem.EditTextDate)
-
-        adapter = MarsAdapter(requireContext(), this@MarsFragment)
-        binding.rcView.layoutManager = LinearLayoutManager(requireContext())
-        binding.rcView.adapter = adapter
-
-        marsViewModel.resultLiveData.observe(this, Observer {
-            it.photos.forEach { photo -> adapter.add(photo) }
-        })
-
-    }
-
-    private fun onClick(){
         binding.marsSearchItem.ButtonSearch.setOnClickListener {
             adapter.clear()
             if (!TextUtils.isEmpty(binding.marsSearchItem.EditTextDate.text)){
@@ -61,5 +44,19 @@ class MarsFragment : Fragment() {
                 marsViewModel.getMars(binding.marsSearchItem.EditTextDate.text.toString())
             }
         }
+    }
+
+    private fun init(){
+        MaskFormatWatcher(MaskImpl.createTerminated(UnderscoreDigitSlotsParser().
+        parseSlots("____-__-__"))).installOn(binding.marsSearchItem.EditTextDate)
+
+        adapter = MarsAdapter(requireContext())
+        binding.rcView.layoutManager = LinearLayoutManager(requireContext())
+        binding.rcView.adapter = adapter
+
+        marsViewModel.resultLiveData.observe(this, Observer {
+            it.photos.forEach { photo -> adapter.add(photo) }
+        })
+
     }
 }

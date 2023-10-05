@@ -15,6 +15,9 @@
     <string name="rover_status">rover_status:</string>
     <string name="launch_landing">launch_landing:</string>
     <string name="asteroid">Asteroids - NeoWs</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="magnitude">magnitude</string>
+    <string name="diameter">diameter in km</string>
+    <string name="hazardous_asteroid">hazardous</string>
+    <string name="orbital_period">orbital period</string>
 </resources>
