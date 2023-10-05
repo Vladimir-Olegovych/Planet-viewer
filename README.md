@@ -1,6 +1,5 @@
 # Planet-viewer
 With NaSa Api
 
-
-https://github.com/Vladimir-Olegovych/Planet-viewer/assets/117392112/22835a88-af83-4adc-aaf7-8b8d5fb146e3
+https://github.com/Vladimir-Olegovych/Planet-viewer/assets/117392112/fe3f877f-7066-4fcf-9872-578db22b15fd
 
